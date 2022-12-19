@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <section>
+        <h1 class="game--title">Tic Tac Toe</h1>
+        <form method="post">
+        <div class="game--container">
+            <button data-cell-index="0" class="cell" name="button" value="1" {% if input_value[1] != "" %} disabled {% endif %}>{{ input_value[1] }}</button>
+            <button data-cell-index="1" class="cell" name="button" value="2" {% if input_value[2] != "" %} disabled {% endif %}>{{ input_value[2] }}</button>
+            <button data-cell-index="2" class="cell" name="button" value="3" {% if input_value[3] != "" %} disabled {% endif %}>{{ input_value[3] }}</button>
+            <button data-cell-index="3" class="cell" name="button" value="4" {% if input_value[4] != "" %} disabled {% endif %}>{{ input_value[4] }}</button>
+            <button data-cell-index="4" class="cell" name="button" value="5" {% if input_value[5] != "" %} disabled {% endif %}>{{ input_value[5] }}</button>
+            <button data-cell-index="5" class="cell" name="button" value="6" {% if input_value[6] != "" %} disabled {% endif %}>{{ input_value[6] }}</button>
+            <button data-cell-index="6" class="cell" name="button" value="7" {% if input_value[7] != "" %} disabled {% endif %}>{{ input_value[7] }}</button>
+            <button data-cell-index="7" class="cell" name="button" value="8" {% if input_value[8] != "" %} disabled {% endif %}>{{ input_value[8] }}</button>
+            <button data-cell-index="8" class="cell" name="button" value="9" {% if input_value[9] != "" %} disabled {% endif %}>{{ input_value[9] }}</button>
+        </div>
+        </form>
+        <h2 class="game--status">{{ game_status }}</h2>
+        <br/>
+        <form method="get">
+        <button class="game--restart">Restart Game</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
